@@ -1,0 +1,1 @@
+print ('Gou - Gou, Bro!')
