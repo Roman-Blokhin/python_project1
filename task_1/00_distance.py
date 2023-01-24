@@ -3,6 +3,8 @@
 
 # Есть словарь координат городов
 
+from pprint import pprint # позволяет красиво выводить словарь, в несколько строчек
+
 sites = {
     'Moscow': (550, 370),
     'London': (510, 510),
@@ -12,7 +14,6 @@ sites = {
 # Составим словарь словарей расстояний между ними
 
 distances = dict ()
-distances_1 = dict ()
 
 moscow = sites ['Moscow']
 london = sites ['London']
@@ -30,11 +31,11 @@ distances ['Moscow'] = {}
 distances ['Moscow'] ['London'] = moscow_london
 distances ['Moscow'] ['Paris'] = moscow_paris
 
-distances_1 ['London'] = {}
-distances_1 ['London'] ['Paris'] = london_paris
+distances ['London'] = {}
+distances ['London'] ['Paris'] = london_paris
 
-print(distances)
-print(distances_1)
+pprint(distances)
+
 
 
 
