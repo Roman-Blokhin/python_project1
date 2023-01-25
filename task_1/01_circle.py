@@ -26,18 +26,42 @@ point = (23, 34)
 #       формула так же есть в интернете
 #       квадратный корень - это возведение в степень 0.5
 #       операции сравнения дают булевы константы True и False
-# TODO здесь ваш код
+
+# (x ** 2 + y ** 2) * .5 <= R ** 2
+
+from math import sqrt
+
+result = sqrt (23 ** 2 + 34 ** 2)
+print (result)
+if result <= radius ** 2:
+    print (True)
+else:
+    print (False)
+
+# -------------------------------------------------------------
 
 # Аналогично для другой точки
-point_2 = (30, 30)
+# point (30, 30)
+
 # Если точка point_2 лежит внутри круга (radius = 42), то выведите на консоль True,
 # Или False, если точка лежит вовне круга.
-# TODO здесь ваш код
+
+def point_2 (a, b):
+
+    result_2 = sqrt(a ** 2 + b ** 2)
+    print(result_2)
+    if result_2 <= radius ** 2:
+        print(True)
+    else:
+        print(False)
+
+point_2 (30, 30)
 
 # Пример вывода на консоль:
 #
 # 77777.7777
 # False
 # False
+
 
 
