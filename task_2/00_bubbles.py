@@ -24,7 +24,7 @@ booble(point=point_1, step=5)
 
 # Нарисовать 10 пузырьков в ряд
 
-point_2 = sd.get_point(220,140)
+point_3 = sd.get_point(220, 140)
 def booble (point, step):
     radius_2 = 15
     for _ in range (2):
@@ -32,11 +32,22 @@ def booble (point, step):
         sd.circle(center_position=point, color=sd.COLOR_GREEN, radius=radius_2, width=5)
 
 for x in range (250, 701, 50):
-    point_2 = sd.get_point(x, 140)
-    booble(point=point_2, step=10)
+    point_3 = sd.get_point(x, 140)
+    booble(point=point_3, step=10)
 
 # Нарисовать три ряда по 10 пузырьков
-# TODO здесь ваш код
+
+point_3 = sd.get_point(220, 140)
+def booble (point, step):
+    radius_3 = 25
+    for _ in range (2):
+        radius_3 += step
+        sd.circle(center_position=point, color=sd.random_color(), radius=radius_3, width=3)
+
+for y in range (200, 300, 45):
+    for x in range (650, 931, 30):
+        point_3 = sd.get_point(x, y)
+        booble(point=point_3, step=5)
 
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
 # TODO здесь ваш код
