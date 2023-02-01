@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import random
 
 import simple_draw as sd
 
@@ -24,20 +25,18 @@ booble(point=point_1, step=5)
 
 # Нарисовать 10 пузырьков в ряд
 
-point_3 = sd.get_point(220, 140)
 def booble (point, step):
     radius_2 = 15
-    for _ in range (2):
+    for _ in range (1):
         radius_2 += step
         sd.circle(center_position=point, color=sd.COLOR_GREEN, radius=radius_2, width=5)
 
 for x in range (250, 701, 50):
-    point_3 = sd.get_point(x, 140)
-    booble(point=point_3, step=10)
+    point_2 = sd.get_point(x, 140)
+    booble(point=point_2, step=5)
 
 # Нарисовать три ряда по 10 пузырьков
 
-point_3 = sd.get_point(220, 140)
 def booble (point, step):
     radius_3 = 25
     for _ in range (2):
@@ -50,7 +49,17 @@ for y in range (200, 300, 45):
         booble(point=point_3, step=5)
 
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
-# TODO здесь ваш код
+
+def booble (point, step):
+    radius_4 = 10
+    for _ in range (1):
+        radius_4 += step
+        sd.circle(center_position=point, color=sd.random_color(), radius=radius_4, width=1)
+
+for _ in range (100):
+    point_4 = sd.random_point()
+    step = random.randint (1, 40)
+    booble(point=point_4, step=step)
 
 sd.pause()
 
