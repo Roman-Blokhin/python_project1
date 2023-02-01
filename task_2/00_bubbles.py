@@ -23,7 +23,17 @@ def booble (point, step):
 booble(point=point_1, step=5)
 
 # Нарисовать 10 пузырьков в ряд
-# TODO здесь ваш код
+
+point_2 = sd.get_point(220,140)
+def booble (point, step):
+    radius_2 = 15
+    for _ in range (2):
+        radius_2 += step
+        sd.circle(center_position=point, color=sd.COLOR_GREEN, radius=radius_2, width=5)
+
+for x in range (250, 701, 50):
+    point_2 = sd.get_point(x, 140)
+    booble(point=point_2, step=10)
 
 # Нарисовать три ряда по 10 пузырьков
 # TODO здесь ваш код
